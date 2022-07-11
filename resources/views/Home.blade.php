@@ -10,7 +10,16 @@
     <h1>Films:</h1>
     <ul>
         @foreach ($movies as $movie)
-        {{-- <li>{{$movie->title}}</li> --}}
+        <li>
+            <h3>{{$movie->title}}</h3>
+            <ul>
+                <li><strong>Titolo originale:</strong> {{$movie->original_title}}</li>
+                <li><strong>Nazionalità:</strong> {{$movie->nationality}}</li>
+                <li><small>Data: {{$movie->date}}</small></li>
+                <li><small>Voto: {{$movie->vote}}</small></li>
+            </ul>
+        </li>
+
         {{-- <li><x-movie-card :title="$movie['title'] :date="$movie['date']"/></li> --}}
         @endforeach
     </ul>
